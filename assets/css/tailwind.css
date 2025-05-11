@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-spotify-black text-white;
+    font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-spotify-green hover:bg-green-400 text-white font-bold py-2 px-6 rounded-full;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-black font-bold py-2 px-6 rounded-full hover:bg-gray-200;
+  }
+  
+  .btn-outline {
+    @apply border border-gray-500 text-white px-4 py-2 rounded-full hover:border-white;
+  }
+  
+  .sidebar-link {
+    @apply flex items-center py-2 px-4 text-white hover:bg-gray-800 rounded;
+  }
+  
+  .sidebar-link.active {
+    @apply bg-gray-800;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #535353;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
