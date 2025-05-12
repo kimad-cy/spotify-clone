@@ -25,7 +25,7 @@
         <div 
           v-for="artist in artists" 
           :key="artist.id"
-          class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition cursor-pointer"
+          class="bg-black p-4 rounded-lg hover:bg-black transition cursor-pointer"
           @click="navigateToArtist(artist.id)"
         >
           <img 

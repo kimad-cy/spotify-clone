@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800 p-4">
+  <div class="fixed bottom-0 left-0 right-0 bg-[#0d0d0d] border-t border-gray-800 p-4">
     <div class="max-w-7xl mx-auto flex items-center justify-between">
       <!-- Track Info -->
       <div class="flex items-center space-x-4">

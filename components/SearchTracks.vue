@@ -1,11 +1,11 @@
 <template>
-  <div class="w-full bg-gray-900 p-4 rounded-lg">
+  <div class="w-full p-4 rounded-lg ">
     <div class="relative">
       <input
         v-model="searchQuery"
         type="text"
         placeholder="Rechercher des titres..."
-        class="w-full bg-gray-800 text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+        class="w-full border-green-500 bg-[#0d0d0d] text-white px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
         @input="debounceSearch"
       >
       <div v-if="isLoading" class="absolute right-3 top-3">
@@ -14,11 +14,11 @@
     </div>
 
     <!-- Search Results -->
-    <div v-if="searchResults.length > 0" class="mt-4 space-y-2 max-h-96 overflow-y-auto bg-gray-800 rounded-lg p-2">
+    <div v-if="searchResults.length > 0" class="mt-4 space-y-2 max-h-96 overflow-y-auto bg-[#0d0d0d] rounded-lg p-2">
       <div 
         v-for="track in searchResults" 
         :key="track.id"
-        class="flex items-center gap-4 p-3 hover:bg-gray-700 rounded-lg cursor-pointer transition-colors"
+        class="flex items-center gap-4 p-3 hover:bg-black rounded-lg cursor-pointer transition-colors"
         @click="$emit('track-selected', track)"
       >
         <img 

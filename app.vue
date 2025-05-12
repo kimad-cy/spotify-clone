@@ -12,7 +12,7 @@
       <!-- Login Page -->
       <div v-else class="min-h-screen bg-black">
         <!-- Top Bar -->
-        <div class="fixed top-0 left-0 right-0 bg-black/80 backdrop-blur-md z-50">
+        <div class="top-4 left-4 right-4 bg-black/80 backdrop-blur-md z-50">
           <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
               <!-- Logo -->
@@ -35,7 +35,7 @@
       </div>
 
       <!-- Player -->
-      <div v-if="isLogged" class="fixed bottom-0 left-0 right-0 bg-gray-900 border-t border-gray-800 p-4">
+      <div v-if="isLogged" class="fixed bottom-0 left-0 right-0 bg-[#0d0d0d] border-t border-gray-800 p-4">
         <div class="flex items-center justify-between">
           <!-- Now Playing -->
           <div class="flex items-center space-x-4">

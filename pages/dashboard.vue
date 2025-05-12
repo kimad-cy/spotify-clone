@@ -1,7 +1,7 @@
 <template>
-  <div class="flex h-screen bg-black text-white">
+  <div class="flex h-screen bg-[#121212CC]  text-white">
     <!-- Sidebar -->
-    <div class="w-64 bg-black border-r border-gray-800 flex flex-col h-screen">
+    <div class="w-64 bg-[#121212CC]  border-r border-white flex flex-col h-screen">
       <div class="p-6">
         <nav class="space-y-4">
           <NuxtLink to="/dashboard" class="flex items-center space-x-3 text-white">
@@ -36,7 +36,7 @@
 
       <!-- Playlists Section -->
       <div class="flex-1 overflow-y-auto px-6 pb-32">
-        <div class="pt-4 border-t border-gray-800">
+        <div class="pt-4 border-t border-white">
           <h2 class="text-gray-400 text-sm font-semibold mb-4">PLAYLISTS</h2>
           <div class="space-y-2">
             <div v-for="playlist in userPlaylists.slice(0, 5)" :key="playlist.id" 
@@ -92,7 +92,7 @@
             <h2 class="text-2xl font-bold mb-4">Écoutés récemment</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               <div v-for="item in recentlyPlayed" :key="item.track.id" 
-                   class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition cursor-pointer"
+                  class="bg-[#0d0d0d] p-4 rounded-lg hover:bg-black transition cursor-pointer text-white"
                    @click="playTrack(item.track)">
                 <img :src="item.track.album.images[0]?.url" :alt="item.track.name" 
                      class="w-full aspect-square object-cover rounded mb-4">
@@ -107,7 +107,7 @@
             <h2 class="text-2xl font-bold mb-4">Vos titres préférés</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               <div v-for="track in topTracks" :key="track.id" 
-                   class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition cursor-pointer"
+                   class="bg-[#0d0d0d] p-4 rounded-lg hover:bg-black transition cursor-pointer text-white"
                    @click="playTrack(track)">
                 <img :src="track.album.images[0]?.url" :alt="track.name" 
                      class="w-full aspect-square object-cover rounded mb-4">

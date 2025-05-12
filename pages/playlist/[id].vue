@@ -11,7 +11,7 @@
     <div v-else-if="playlist" class="space-y-8">
       <!-- Playlist Header -->
       <div class="flex items-end space-x-6">
-        <div class="w-48 h-48 bg-gray-800 rounded-lg shadow-2xl flex items-center justify-center">
+        <div class="w-48 h-48 bg-[#0d0d0d] rounded-lg shadow-2xl flex items-center justify-center">
           <img 
             v-if="playlist.images && playlist.images.length > 0"
             :src="playlist.images[0].url" 
@@ -38,13 +38,13 @@
       </div>
       
       <!-- Add Tracks Section -->
-      <div class="bg-gray-800 rounded-lg p-6">
+      <div class="bg-[#0d0d0d] rounded-lg p-6">
         <h2 class="text-2xl font-bold mb-4">Ajouter des titres</h2>
         <SearchTracks @track-selected="addTrack" />
       </div>
       
       <!-- Playlist Tracks -->
-      <div class="bg-gray-800 rounded-lg overflow-hidden">
+      <div class="bg-[#0d0d0d] rounded-lg overflow-hidden">
         <div class="p-4 border-b border-gray-700">
           <div class="grid grid-cols-[50px_1fr_1fr_1fr] gap-4 text-gray-400 text-sm">
             <div>#</div>
@@ -57,7 +57,7 @@
           <div 
             v-for="(item, index) in playlist.tracks.items" 
             :key="item.track.id"
-            class="grid grid-cols-[50px_1fr_1fr_1fr] gap-4 p-4 hover:bg-gray-700 transition cursor-pointer"
+            class="grid grid-cols-[50px_1fr_1fr_1fr] gap-4 p-4 hover:bg-black transition cursor-pointer"
             @click="playTrack(item.track.uri)"
           >
             <div class="text-gray-400">{{ index + 1 }}</div>

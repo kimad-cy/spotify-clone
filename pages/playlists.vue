@@ -19,7 +19,7 @@
 
       <div v-else class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         <div v-for="playlist in playlists" :key="playlist.id" 
-             class="bg-gray-800 p-4 rounded-lg hover:bg-gray-700 transition cursor-pointer group"
+             class="bg-[#0d0d0d] p-4 rounded-lg hover:bg-[#0d0d0d] transition cursor-pointer group"
              @click="navigateToPlaylist(playlist.id)">
           <img 
             :src="playlist.images?.[0]?.url || '/default-playlist.svg'" 
